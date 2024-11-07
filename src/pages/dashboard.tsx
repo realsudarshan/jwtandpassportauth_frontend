@@ -15,17 +15,11 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const urlParams = new URLSearchParams(location.search);
-      const token = urlParams.get('token');
+     
 
-      if (token) {
+      
         
-        // Save token in local storage
-        localStorage.setItem('jwt', token);
-        // Remove token from URL
-        navigate('/auth/success', { replace: true });
-        
-      }
+      
 
       try {
         const jwt = localStorage.getItem('jwt');
